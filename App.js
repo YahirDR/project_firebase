@@ -1,13 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'; // Importa TouchableOpacity para manejar el clic
+import app from './credenciales';
+
+
+
 
 export default function App() {
+
+  
+  const  click = () =>{
+    console.log(app);
+  }
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <TouchableOpacity onPress={click}>
+        <Text>Click Me</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
+
+
 }
 
 const styles = StyleSheet.create({
